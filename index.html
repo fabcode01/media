@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de itens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Calcular média</h1>
+        <label for="p1">PESO 1</label>
+        <input type="text" name="p1" id="p1" placeholder="peso 1 / kg">
+        
+        <label for="p2">PESO 2</label>
+        <input type="text" name="p2" id="p2" placeholder="peso / kg">
+        
+        <label for="p3">PESO 3</label>
+        <input type="text" name="p3" id="p3" placeholder="peso 3 / kg">
+
+        <input type="submit" value="CALCULAR" onclick="calcular()">
+
+        <div id="res">
+            
+
+        </div>
+
+       
+
+    </div>
+
+  <a href="https://github.com/fabcode01" target="_blank">
+      <footer>
+        <p>fabricio silva</p>
+        <img src="img/github.png" alt="github icon">
+      </footer>
+  </a>
+
+
+
+    <script>
+
+        
+
+
+        
+        function calcular(){
+            /* pega os itens do documneto */
+            var p1 = document.getElementById("p1")
+            var p2 = document.getElementById("p2")
+            var p3 = document.getElementById("p3")
+
+            var res = document.getElementById("res")
+        
+            p1 = Number(p1.value)
+            p2 = Number(p2.value)
+            p3 = Number(p3.value)
+
+            var $media = (p1 + p2 + p3) / 3
+
+            $media = $media.toFixed(2)
+
+            res.innerHTML = `A média é <strong>${$media} KG </strong>`
+           
+            
+        }
+
+
+
+
+    </script>
+</body>
+</html>
