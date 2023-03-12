@@ -52,21 +52,26 @@
             var p3 = document.getElementById("p3")
 
             var res = document.getElementById("res")
+                    p1 = (p1).value
+                    p2 = (p2).value
+                    p3 = (p3).value
         
-            p1 = Number(p1.value)
-            p2 = Number(p2.value)
-            p3 = Number(p3.value)
-
-            var $media = (p1 + p2 + p3) / 3
-
-            $media = $media.toFixed(2)
-
-            res.innerHTML = `A média é <strong>${$media} KG </strong>`
+            if (isNaN(p1) == true || isNaN(p2) == true || isNaN(p3) == true){
+                res.innerHTML = `Somente números!`
+                }else{
+                    
+                    p1 = Number(p1)
+                    p2 = Number(p2)
+                    p3 = Number(p3)
+                    var media = (p1 + p2 + p3) / 3
+                    media = media.toFixed(2)
+                  
+                    res.innerHTML = `A média é <strong>${media} KG</strong>`
+                }
+                
            
-            
-        }
-
-
+    
+    }
 
 
     </script>
